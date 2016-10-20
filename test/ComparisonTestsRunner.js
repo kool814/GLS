@@ -84,7 +84,7 @@ const ComparisonTestsRunner = (function () {
             const tests = {};
             let children = fs.readdirSync(rootPath);
 
-            if (commandsToRun) {
+            if (commandsToRun.size > 0) {
                 children = children.filter(child => {
                     return commandsToRun.has(child.toLowerCase());
                 });
