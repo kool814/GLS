@@ -1,0 +1,9 @@
+-
+begin
+    # ...
+rescue ExceptionType => foo
+    # ...
+ensure
+    # ...
+end
+-

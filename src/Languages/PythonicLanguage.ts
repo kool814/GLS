@@ -108,9 +108,21 @@ export abstract class PythonicLanguage extends Language {
     protected generateExceptionProperties(exceptions: ExceptionProperties): void {
         exceptions.catch = "catch";
         exceptions.finally = "finally";
-        exceptions.throw = "throw";
+        exceptions.throw = "raise";
         exceptions.try = "try";
         exceptions.variablePrefix = "";
+
+        exceptions.blockEnd = "";
+        exceptions.tryStartRight = ":";
+        exceptions.finallyStartRight = ":";
+        exceptions.catchStartMiddle = " ";
+        exceptions.catchStartLink = " as ";
+        exceptions.catchStartRight = ":";
+
+        exceptions.throwExceptionMiddle = "(";
+        exceptions.throwExceptionRight = ")";
+
+        exceptions.requiresExceptionType = true;
     }
 
     /**
@@ -121,6 +133,7 @@ export abstract class PythonicLanguage extends Language {
     protected generateFunctionProperties(functions: FunctionProperties): void {
         functions.defineStartLeft = "def ";
         functions.defineStartRight = ":";
+        functions.requiresExceptions = false;
     }
 
     /**
