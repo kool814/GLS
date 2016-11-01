@@ -69,6 +69,7 @@ export class Java extends CLikeLanguage {
             "number": "double"
         };
         classes.declareExtendsLeft = " extends ";
+        classes.declareImplementsLeft = " implements ";
         classes.declareStartRight = " {";
         classes.superConstructor = "super";
     }
@@ -226,11 +227,12 @@ export class Java extends CLikeLanguage {
         interfaces.declareExtendsLeft = " extends ";
         interfaces.declareExtendsRight = ", ";
         interfaces.declareEnd = "}";
-        interfaces.supported = true;
         interfaces.declareMethodLeft = "public ";
         interfaces.declareMethodMiddle = "(";
         interfaces.declareMethodRight = ")";
+        interfaces.declareImplementsExplicit = true;
         interfaces.methodTypeAfter = false;
+        interfaces.supported = true;
     }
 
     /**
