@@ -226,11 +226,6 @@ Not all languages work similarly to the supported ones. These will likely never 
             <td></td>
         </tr>
         <tr>
-            <th>JavaScript (&lt;ES6)</th>
-            <td></td>
-            <td>✓</td>
-        </tr>
-        <tr>
             <th>Rust</th>
             <td>✓</td>
             <td></td>
