@@ -72,6 +72,7 @@ export class Java extends CLikeLanguage {
         classes.declareImplementsLeft = " implements ";
         classes.declareStartRight = " {";
         classes.superConstructor = "super";
+        classes.generics.used = true;
     }
 
     /**
@@ -169,6 +170,7 @@ export class Java extends CLikeLanguage {
         enums.declareValueLeft = "(";
         enums.declareValueRight = ")";
         enums.declareLastRight = "";
+        enums.isObject = false;
     }
 
     /**

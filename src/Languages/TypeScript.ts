@@ -73,6 +73,7 @@ export class TypeScript extends CLikeLanguage {
         classes.declareImplementsLeft = " implements ";
         classes.declareStartRight = " {";
         classes.superConstructor = "super";
+        classes.generics.used = true;
     }
 
     /**
@@ -164,6 +165,7 @@ export class TypeScript extends CLikeLanguage {
 
         enums.declareStartRight = " {";
         enums.declareLastRight = "";
+        enums.isObject = false;
     }
 
     /**

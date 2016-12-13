@@ -72,6 +72,7 @@ export class CSharp extends CLikeLanguage {
         classes.declareImplementsLeft = " : ";
         classes.declareStartRight = "\n{";
         classes.superConstructor = "base";
+        classes.generics.used = true;
     }
 
     /**
@@ -164,6 +165,7 @@ export class CSharp extends CLikeLanguage {
 
         enums.declareStartRight = "\n{";
         enums.declareLastRight = "";
+        enums.isObject = false;
     }
 
     /**
