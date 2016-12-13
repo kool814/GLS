@@ -6,6 +6,7 @@ Groups are in order of commit magnitude.
 
 
 #### [Josh Goldberg](http://github.com/JoshuaKGoldberg)
+
 * Project lead
 
 
@@ -21,7 +22,7 @@ Groups are in order of commit magnitude.
 * [Benjamin Wolf](https://github.com/Ben-Wolf)
     * Fall 2016:
         * List pops [design](https://github.com/HighSchoolHacking/GLS/pull/128) and [implementation](https://github.com/HighSchoolHacking/GLS/pull/131)
-        * [do start] and [do while](https://github.com/HighSchoolHacking/GLS/pull/139) investigations
+        * [do start and do while](https://github.com/HighSchoolHacking/GLS/pull/139) investigations
         * Rest parameters [design](https://github.com/HighSchoolHacking/GLS/pull/146) and [implementation](https://github.com/HighSchoolHacking/GLS/pull/147)
         * [Interfaces](https://github.com/HighSchoolHacking/GLS/pulls?utf8=%E2%9C%93&q=is%3Apr%20interfaces%20author%3Aben-wolf)
         * [VS Code extension](https://github.com/HighSchoolHacking/VSCode-GLS-Colorizer)
