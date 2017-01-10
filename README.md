@@ -95,22 +95,22 @@ GLS is halfway between **0.3** and **0.4**.
         <tr>
             <th>Dogfood Feature Complete</th>
             <td>0.4</td>
-            <td>All features expected to be required for dogfooding implemented. Ruby, Python, and Java support.</td>
+            <td>All features expected to be required for dogfooding implemented. Java, JavaScript, Python, and Ruby support.</td>
         </tr>
         <tr>
             <th>Dogfood</th>
             <td>0.5</td>
-            <td>Compiler written in GLS code, working in C#, Java, Ruby, Python, and TypeScript.</td>
+            <td>Compiler written in GLS code, working in C#, Java, JavaScript, Ruby, Python, and TypeScript.</td>
         </tr>
         <tr>
-            <th>Powershell, PHP, ES6 JavaScript, Objective-C, Swift, Misc.</th>
+            <th>Powershell, PHP, Objective-C, Misc.</th>
             <td>0.6</td>
             <td>Dogfood or reject those languages and other possibilities.</td>
         </tr>
         <tr>
             <th>Language Specification Finalized</th>
             <td>0.7</td>
-            <td>Finalized language spec & cleaned internals of code.</td>
+            <td>Finalized language spec &amp; cleaned internals of code.</td>
         </tr>
         <tr>
             <th>General Release</th>
@@ -131,7 +131,7 @@ No language is perfect. The following are some seemingly obvious omissions in GL
         <th>Java</th>
         <th>Python</th>
         <th>Ruby</th>
-        <th>TypeScript</th>
+        <th>(Java|Type)Script</th>
     </thead>
     <tbody>
         <tr>
@@ -221,11 +221,6 @@ Not all languages work similarly to the supported ones. These will likely never 
             <td>✓</td>
         </tr>
         <tr>
-            <th>C++</th>
-            <td>✓</td>
-            <td></td>
-        </tr>
-        <tr>
             <th>Rust</th>
             <td>✓</td>
             <td></td>
@@ -238,7 +233,7 @@ This list will grow as languages are requested.
 
 ## Development
 
-ObjectMakr uses [Gulp](http://gulpjs.com/) to automate building, which requires [Node.js](http://node.js.org).
+GLS uses [Gulp](http://gulpjs.com/) to automate building, which requires [Node.js](http://node.js.org).
 
 To build from scratch, install Node.js and run the following commands:
 
