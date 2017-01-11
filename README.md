@@ -221,6 +221,11 @@ Not all languages work similarly to the supported ones. These will likely never 
             <td>✓</td>
         </tr>
         <tr>
+            <th>C++</th>
+            <td>[✓](https://github.com/HighSchoolHacking/GLS/issues/190)</td>
+            <td></td>
+        </tr>
+        <tr>
             <th>Rust</th>
             <td>✓</td>
             <td></td>
