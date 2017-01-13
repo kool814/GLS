@@ -222,8 +222,13 @@ Not all languages work similarly to the supported ones. These will likely never 
         </tr>
         <tr>
             <th>C++</th>
-            <td>[✓](https://github.com/HighSchoolHacking/GLS/issues/190)</td>
+            <td><a href="https://github.com/HighSchoolHacking/GLS/issues/190">✓ (#190)</a></td>
             <td></td>
+        </tr>
+        <tr>
+            <th>Go</th>
+            <td></td>
+            <td>✓</td>
         </tr>
         <tr>
             <th>Rust</th>
