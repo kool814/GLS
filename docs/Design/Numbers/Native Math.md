@@ -22,11 +22,12 @@ variable : bar int -7
 
 math absolute : bar
 ```
+
 ### `math floor`
 
 `math floor` `:` `name`
 
-Generates code to compute the previous largest integer of the given number.
+Generates code to compute the largest integer <= the given number.
 
 ## Usage
 
@@ -36,6 +37,7 @@ variable : bar int -7
 
 math floor : foo
 ```
+
 ## Implementation
 
 ### Properties
