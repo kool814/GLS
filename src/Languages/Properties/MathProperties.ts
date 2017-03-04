@@ -18,7 +18,6 @@ export class MathProperties {
      * Any imports native math commands require.
      */
     public requiredImports: { [i: string]: string[] };
-    
     /**
      * The name of the math global or namespace.
      */
