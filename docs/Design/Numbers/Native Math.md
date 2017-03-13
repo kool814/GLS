@@ -65,6 +65,7 @@ These commands will be implemented as native calls.
             <td>Floor</td>
             <td><em>(native call properties)</em></td>
             <td>Method properties to compute the largest integer <= the given number.</td>
+        </tr>
      </tbody>
 </table>
 
