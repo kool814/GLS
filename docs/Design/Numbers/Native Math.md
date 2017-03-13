@@ -61,7 +61,12 @@ These commands will be implemented as native calls.
             <td><em>(native call properties)</em></td>
             <td>Method properties to compute the absolute value of a number.</td>
         </tr>
-    </tbody>
+        <tr>
+            <td>Floor</td>
+            <td><em>(native call properties)</em></td>
+            <td>Method properties to compute the largest integer <= the given number.
+            </td>
+     </tbody>
 </table>
 
 ### Language Values
