@@ -61,7 +61,12 @@ These commands will be implemented as native calls.
             <td><em>(native call properties)</em></td>
             <td>Method properties to compute the absolute value of a number.</td>
         </tr>
-    </tbody>
+        <tr>
+            <td>Floor</td>
+            <td><em>(native call properties)</em></td>
+            <td>Method properties to compute the largest integer <= the given number.</td>
+        </tr>
+     </tbody>
 </table>
 
 ### Language Values
@@ -71,32 +76,38 @@ These commands will be implemented as native calls.
         <th>Language</th>
         <th>MathName</th>
         <th>Absolute</th>
+        <th>Floor</th>
     </thead>
     <tbody>
         <tr>
             <th>CSharp</th>
             <td><code>"Math"</code></td>
             <td><code>"Math.Abs"</code> / <code>Static</code> / <code>Function</code></td>
+            <td><code>"Math.Floor"</code> / <code>Static</code> / <code>Function</code></td>
         </tr>
         <tr>
             <th>Java</th>
             <td><code>"Math"</code></td>
             <td><code>"Math.abs"</code> / <code>Static</code> / <code>Function</code></td>
+            <td><code>"Math.floor"</code> / <code>Static</code> / <code>Function</code></td>
         </tr>
         <tr>
             <th>Python</th>
             <td><code>"Math"</code></td>
             <td><code>"fabs"</code> / <code>Static</code> / <code>Function</code></td>
+            <td><code>"floor"</code> / <code>Static</code> / <code>Function</code></td>
         </tr>
         <tr>
             <th>Ruby</th>
             <td><code>"Math"</code></td>
             <td><code>"abs"</code> / <code>Member</code> / <code>Property</code></td>
+            <td><code>"floor"</code> / <code>Member</code> / <code>Property</code></td>
         </tr>
         <tr>
             <th>TypeScript</th>
             <td><code>"Math"</code></td>
             <td><code>"Math.abs"</code> / <code>Static</code> / <code>Function</code></td>
+            <td><code>"Math.floor"</code> / <code>Static</code> / <code>Function</code></td>
         </tr>
     <tbody>
 </table>
