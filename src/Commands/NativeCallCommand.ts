@@ -27,6 +27,7 @@ export abstract class NativeCallCommand extends Command {
 
         this.nativeCallProperties = this.retrieveNativeCallProperties();
         this.scopeRenderers = {
+            [NativeCallScope.Array]: this.renderAsArray.bind(this),
             [NativeCallScope.Member]: this.renderAsMember.bind(this),
             [NativeCallScope.Operator]: this.renderAsOperator.bind(this),
             [NativeCallScope.Static]: this.renderAsStatic.bind(this)
@@ -59,6 +60,27 @@ export abstract class NativeCallCommand extends Command {
      */
     protected retrieveImports(): { [i: string]: string[] } {
         return {};
+    }
+
+    /**
+     * Renders the native call as an array.
+     * 
+     * @param parameters   The command's name, followed by any number of
+     *                     items to initialize in the Array.
+     * @returns Line(s) of code in the language.
+     * @remarks Usage: [parameter, parameter].name
+     */
+    private renderAsArray(parameters: string[]): LineResults {
+        let result: string = "";
+
+       result += "[" + parameters[1];
+       for (let i: number = 2; i < parameters.length; i += 1) {
+           result += ", " + parameters[i];
+       }
+
+       result += "]" + this.nativeCallProperties.name;
+
+        return LineResults.newSingleLine(result, true);
     }
 
     /**
