@@ -78,7 +78,7 @@ export abstract class NativeCallCommand extends Command {
            result += ", " + parameters[i];
        }
 
-       result += "]" + this.nativeCallProperties.name;
+       result += "]." + this.nativeCallProperties.name;
 
         return LineResults.newSingleLine(result, true);
     }

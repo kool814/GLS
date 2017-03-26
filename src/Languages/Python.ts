@@ -289,6 +289,14 @@ export class Python extends PythonicLanguage {
             "floor",
             NativeCallScope.Static,
             NativeCallType.Function);
+        math.max = new NativeCallProperties(
+            "max",
+            NativeCallScope.Static,
+            NativeCallType.Function);
+        math.min = new NativeCallProperties(
+            "min",
+            NativeCallScope.Static,
+            NativeCallType.Function);
         math.requiredImports = {};
         math.mathName = "Math";
     }

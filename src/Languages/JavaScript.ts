@@ -293,6 +293,14 @@ export class JavaScript extends CLikeLanguage {
             "Math.floor",
             NativeCallScope.Static,
             NativeCallType.Function);
+        math.max = new NativeCallProperties(
+            "Math.max",
+            NativeCallScope.Static,
+            NativeCallType.Function);
+        math.min = new NativeCallProperties(
+            "Math.min",
+            NativeCallScope.Static,
+            NativeCallType.Function);
         math.requiredImports = {};
         math.mathName = "Math";
     }
