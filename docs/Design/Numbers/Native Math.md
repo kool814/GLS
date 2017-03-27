@@ -14,7 +14,7 @@ These are typically encapsulated in some kind of global `Math` object and/or sys
 
 Generates code to compute the absolute value of the given number.
 
-## Usage
+#### Usage
 
 ```
 variable : foo double 3.5
@@ -29,7 +29,7 @@ math absolute : bar
 
 Generates code to compute the largest integer <= the given number.
 
-## Usage
+#### Usage
 
 ```
 variable : foo double 3.5
@@ -43,7 +43,7 @@ math floor : foo
 
 Generates code to compute the greater of the two given numbers.
 
-## Usage
+#### Usage
 
 ```
 variable : foo int -7
@@ -58,7 +58,7 @@ math max : foo, bar
 
 Generates code to compute the lesser of the two given numbers.
 
-## Usage
+#### Usage
 
 ```
 variable : foo int -7
