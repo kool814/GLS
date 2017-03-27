@@ -65,6 +65,8 @@ import { MainEndCommand } from "./MainEndCommand";
 import { MainStartCommand } from "./MainStartCommand";
 import { MathAbsoluteCommand } from "./MathAbsoluteCommand";
 import { MathFloorCommand } from "./MathFloorCommand";
+import { MathMaxCommand } from "./MathMaxCommand";
+import { MathMinCommand } from "./MathMinCommand";
 import { MemberVariableCommand } from "./MemberVariableCommand";
 import { MemberVariableDeclareCommand } from "./MemberVariableDeclareCommand";
 import { NotCommand } from "./NotCommand";
@@ -169,6 +171,8 @@ export class CommandsBag {
             "main start": new MainStartCommand(context),
             "math absolute": new MathAbsoluteCommand(context),
             "math floor": new MathFloorCommand(context),
+            "math max": new MathMaxCommand(context),
+            "math min": new MathMinCommand(context),
             "member variable": new MemberVariableCommand(context),
             "member variable declare": new MemberVariableDeclareCommand(context),
             "not": new NotCommand(context),

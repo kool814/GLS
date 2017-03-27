@@ -10,9 +10,19 @@ export class MathProperties {
     public absolute: NativeCallProperties;
 
     /**
-     * How to retrieve the largest previous integer of a number.
+     * How to retrieve the largest integer <= a number.
      */
     public floor: NativeCallProperties;
+
+    /**
+     * How to retrieve the greater of two numbers.
+     */
+    public max: NativeCallProperties;
+
+    /**
+     * How to retrieve the lower of two numbers.
+     */
+    public min: NativeCallProperties;
 
     /**
      * Any imports native math commands require.

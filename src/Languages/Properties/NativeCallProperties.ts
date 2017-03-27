@@ -3,6 +3,11 @@
  */
 export enum NativeCallScope {
     /**
+     * Called as a member of an array containing the parameters.
+     */
+    Array,
+
+    /**
      * Called as a member of the calling object.
      */
     Member,

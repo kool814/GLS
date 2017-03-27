@@ -319,6 +319,14 @@ export class CSharp extends CLikeLanguage {
             "Math.Floor",
             NativeCallScope.Static,
             NativeCallType.Function);
+        math.max = new NativeCallProperties(
+            "Math.Max",
+            NativeCallScope.Static,
+            NativeCallType.Function);
+        math.min = new NativeCallProperties(
+            "Math.Min",
+            NativeCallScope.Static,
+            NativeCallType.Function);
         math.requiredImports = {
             "System": ["Math"]
         };

@@ -300,6 +300,14 @@ export class Ruby extends PythonicLanguage {
             "floor",
             NativeCallScope.Member,
             NativeCallType.Property);
+        math.max = new NativeCallProperties(
+            "max",
+            NativeCallScope.Array,
+            NativeCallType.Function);
+        math.min = new NativeCallProperties(
+            "min",
+            NativeCallScope.Array,
+            NativeCallType.Function);
         math.requiredImports = {};
         math.mathName = "Math";
     }
