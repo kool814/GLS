@@ -2,9 +2,6 @@
 
 Including items from other files or libraries/packages/modules is done with importing.
 
-Import commands are the only ones in GLS that change based on other commands in the file.
-Intricacies in file path relativity necessesitate import commands knowing their file's relative path.
-
 Supported languages generally have one or two of the following forms of inputs:
 
 1. Importing specific items within a package
@@ -13,6 +10,8 @@ Supported languages generally have one or two of the following forms of inputs:
 The first is preferred for being more explicit, and will be used in languages that support it.
 The second is used as a fallback when the first is unavailable or inconvenient. 
 
+Importing items from other files in the same code project is done automatically.
+If an path is detected as being a part of the file's path as started in a `file start` command, and the output language uses relative imports, a relative path will be used.
 
 ## Commands
 
@@ -26,13 +25,19 @@ Importing some items from a package is done with the `import` command.
 ## Usage
 
 ```
+file start : MyPackage/File
 import : Package.Section ItemOne ItemTwo
+import : MyPackage.Directory.OtherFile ItemA ItemB
 ```
 
 ### CSharp
 
 ```csharp
 using Package.Section;
+```
+
+```csharp
+using MyPackage.Directory;
 ```
 
 ### Java
@@ -42,10 +47,17 @@ import package.section.ItemOne;
 import package.section.ItemTwo;
 ```
 
+```java
+import myPackage.directory.ItemA;
+import myPackage.directory.ItemB;
+```
+
 ### Python
 
 ```python
 from "package/section" import ItemOne, ItemTwo
+
+from "./
 ```
 
 ### Ruby
@@ -115,6 +127,11 @@ Others allow items to be separated by `", "`.
             <td>string</td>
             <td>End of an import line.</td>
         </tr>
+        <tr>
+            <td>RelativeLocalPaths</td>
+            <td>boolean</td>
+            <td>Whether local imports should have relative paths.</td>
+        </tr>
     </tbody>
 </table>
 
@@ -130,6 +147,7 @@ Others allow items to be separated by `", "`.
         <td>ImportLeft</td>
         <td>ImportMiddle</td>
         <td>ImportRight</td>
+        <td>RelativeLocalPaths</td>
     </thead>
     <tbody>
         <tr>
@@ -141,6 +159,7 @@ Others allow items to be separated by `", "`.
             <td><code>"using "</code></td>
             <td></td>
             <td><code>";"</code></td>
+            <td><code>false</code></td>
         </tr>
         <tr>
             <th>Java</th>
@@ -151,6 +170,18 @@ Others allow items to be separated by `", "`.
             <td><code>"import "</code></td>
             <td><code>"."</code></td>
             <td><code>"*;"</code></td>
+            <td><code>false</code></td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
+            <td><code>FileSystem</code></td>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+            <td><code>"import { "</code></td>
+            <td><code>" } from \""</code></td>
+            <td><code>"\";"</code></td>
+            <td><code>true</code></td>
         </tr>
         <tr>
             <th>Python</th>
@@ -161,6 +192,7 @@ Others allow items to be separated by `", "`.
             <td><code>"from \""</code></td>
             <td><code>"\" import *"</code></td>
             <td><code>""</code></td>
+            <td><code>true</code></td>
         </tr>
         <tr>
             <th>Ruby</th>
@@ -171,6 +203,7 @@ Others allow items to be separated by `", "`.
             <td><code>"require \""</code></td>
             <td></td>
             <td><code>"\""</code></td>
+            <td><code>true</code></td>
         </tr>
         <tr>
             <th>TypeScript</th>
@@ -181,6 +214,7 @@ Others allow items to be separated by `", "`.
             <td><code>"import { "</code></td>
             <td><code>" } from \""</code></td>
             <td><code>"\";"</code></td>
+            <td><code>true</code></td>
         </tr>
     </tbody>
 </table>

@@ -6,10 +6,10 @@ The commands that are used to create importable program files.
 
 ### `file start`
 
-`file start : name`
+`file start : fullPath`
 
-Command that starts the file block. 
-The first parameter is the name of the file.
+Command that starts the file block.
+The first parameter is the full path to the file in PascalCase, including the name of the file but excluding any file extension.
 
 ### `file end`
 
@@ -20,7 +20,7 @@ Command that ends the file block.
 ## Usage
 
 ```
-file start : Program
+file start : MyPackage/Directory/Program
 comment line : ...
 file end : Program
 ```
@@ -62,9 +62,7 @@ import java.util.*;
 ### TypeScript
 
 ```typescript
-namespace Program {
-    // ...
-}
+// ...
 ```
 
 ## Implementation
@@ -132,9 +130,9 @@ namespace Program {
         </tr>
         <tr>
             <th>TypeScript</th>
-            <td><code>"namespace "</code></td>
-            <td><code>" {</code></td>
-            <td><code>"}"</code></td>
+            <td><code>""</code></td>
+            <td><code>""</code></td>
+            <td><code>""</code></td>
         </tr>
     </tbody>
 </table>
