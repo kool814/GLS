@@ -1,3 +1,4 @@
+import { Command } from "../Commands/Command";
 import { CommandsBag } from "../Commands/CommandsBag";
 import { LineResults } from "../Commands/LineResults";
 import { ConversionContext } from "./ConversionContext";
@@ -59,7 +60,11 @@ export class GlsParser {
      * @returns The equivalent lines of code in the language.
      */
     public renderParsedCommand(lineParsed: string[]): LineResults {
-        return this.commandsBag.renderCommand(lineParsed);
+        let command: Command = this.commandsBag.getCommand(lineParsed[0]);
+
+        command.checkParameterValidity(lineParsed);
+
+        return command.render(lineParsed);
     }
 
     /**
