@@ -1,9 +1,9 @@
 import { Command } from "../Commands/Command";
 import { CommandsBag } from "../Commands/CommandsBag";
 import { LineResults } from "../Commands/LineResults";
-import { ConversionContext } from "./ConversionContext";
 import { CaseStyle } from "../Languages/Casing/CaseStyle";
 import { CaseStyleConverterBag } from "../Languages/Casing/CaseStyleConverterBag";
+import { ConversionContext } from "./ConversionContext";
 
 /**
  * Converter to transform raw GLS syntax into language code.
@@ -12,7 +12,7 @@ export class GlsParser {
     /**
      * A bag for globally known commands.
      */
-    private caseConverter: CaseStyleConverterBag;
+    private caseStyleConverterBag: CaseStyleConverterBag;
 
     /**
      * A bag for globally known commands.
@@ -30,7 +30,7 @@ export class GlsParser {
      * @param context   A driving context for converting commands.
      */
     constructor(context: ConversionContext) {
-        this.caseConverter = new CaseStyleConverterBag();
+        this.caseStyleConverterBag = new CaseStyleConverterBag();
         this.context = context;
         this.commandsBag = new CommandsBag(context);
     }
@@ -71,11 +71,13 @@ export class GlsParser {
      * Converts a name to a casing style.
      * 
      * @param name   A name to convert.
-     * @param casingStyle   A casing style.
+     * @param caseStyle   A casing style.
      * @returns The name under the casing style.
      */
-    public convertToCase(name: string, casingStyle: CaseStyle): string {
-        return this.caseConverter.convert(name, casingStyle);
+    public convertToCase(name: string, caseStyle: CaseStyle): string {
+        const converter = this.caseStyleConverterBag.getConverter(caseStyle);
+
+        return converter.convert(name);
     }
 
     /**
@@ -102,7 +104,7 @@ export class GlsParser {
      * 
      * @param line   A raw line of GLS syntax.
      * @returns The line's command name, followed by any parameters.
-     * @remarks This assumes the line is already whitespace-trimmed. 
+     * @remarks This assumes the line is already whitespace-trimmed.
      */
     private separateLineComponents(line: string): string[] {
         let colonIndex: number = line.indexOf(":");
