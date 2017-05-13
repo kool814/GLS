@@ -16,7 +16,14 @@ describe("BannedKeywordsBag", () => {
             const keyword = bannedKeywordsBag.validateName("assert");
 
             // Assert
-            expect(keyword).to.equal("true");
+            expect(keyword).to.equal(true);
         });
+
+        // it("returns false for an allowed keyword", () => {
+        //     // Arrange
+        //     const bannedKeywordsBag = new BannedKeywordsBag();
+
+        //     // Act
+        // })
     });
 });
