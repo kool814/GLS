@@ -196,9 +196,9 @@ export class BannedKeywordsBag {
      */
     public validateName(alias: string): boolean {
         if (this.bannedKeywords[alias]) {
-            throw new Error(`Invalid variable name requested: '${alias}'.`);
+            return true;
+        } else {
+            return false;
         }
-
-        return false;
     }
 }
