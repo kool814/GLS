@@ -19,7 +19,7 @@ describe("BannedKeywordsBag", () => {
             expect(keyword).to.equal(true);
         });
 
-        it("returns false for an a1llowed keyword", () => {
+        it("returns false for a valid keyword", () => {
             // Arrange
             const bannedKeywordsBag = new BannedKeywordsBag();
 
