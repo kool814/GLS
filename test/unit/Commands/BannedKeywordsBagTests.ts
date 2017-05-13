@@ -19,11 +19,15 @@ describe("BannedKeywordsBag", () => {
             expect(keyword).to.equal(true);
         });
 
-        // it("returns false for an allowed keyword", () => {
-        //     // Arrange
-        //     const bannedKeywordsBag = new BannedKeywordsBag();
+        it("returns false for an a1llowed keyword", () => {
+            // Arrange
+            const bannedKeywordsBag = new BannedKeywordsBag();
 
-        //     // Act
-        // })
+            // Act
+            const keyword = bannedKeywordsBag.validateName("literal");
+
+            // Assert
+            expect(keyword).to.equal(false);
+        });
     });
 });
