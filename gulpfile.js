@@ -24,42 +24,54 @@ gulp.task("dist:clean", function () {
         "dist/*"
     ]);
 });
-gulp.task("dist:amd", function () {
-    var merge = require("merge2");
-    var uglify = require("gulp-uglify");
-    var tsProject = getTsProject("tsconfig.json", {
-        outFile: "GLS.js",
-        module: "amd"
-    });
-    var tsResult = gulp.src("src/**/*.ts")
-        .pipe(tsProject({}));
 
-    return merge([
-        tsResult.dts.pipe(gulp.dest("dist/amd")),
-        tsResult.js
-            .pipe(uglify())
-            .pipe(gulp.dest("dist/amd"))
-    ]);
-});
-gulp.task("dist:system", function () {
-    var merge = require("merge2");
-    var uglify = require("gulp-uglify");
-    var tsProject = getTsProject("tsconfig.json", {
-        outFile: "GLS.js",
-        module: "system"
-    });
-    var tsResult = gulp.src("src/**/*.ts")
-        .pipe(tsProject({}));
+gulp.task("dist:dev", function () {
+    var browserify = require("browserify");
+    var buffer = require("vinyl-buffer");
+    var source = require("vinyl-source-stream");
+    var tsify = require("tsify");
 
-    return merge([
-        tsResult.dts.pipe(gulp.dest("dist/system")),
-        tsResult.js
-            .pipe(uglify())
-            .pipe(gulp.dest("dist/system"))
-    ]);
+    var browsering = browserify({
+        cache: {},
+        debug: true,
+        entries: "./src/index.ts",
+        packageCache: {},
+        standalone: "general-language-syntax"
+    });
+
+    return browsering
+        .plugin(tsify)
+        .bundle()
+        .pipe(source("Gls.js"))
+        .pipe(buffer())
+        .pipe(gulp.dest("./dist"));
 });
+
+gulp.task("dist:min", function () {
+    var browserify = require("browserify");
+    var buffer = require("vinyl-buffer");
+    var uglify = require("gulp-uglify");
+    var source = require("vinyl-source-stream");
+    var tsify = require("tsify");
+
+    var browsering = browserify({
+        cache: {},
+        entries: "./src/index.ts",
+        packageCache: {},
+        standalone: "general-language-syntax"
+    });
+
+    return browsering
+        .plugin(tsify)
+        .bundle()
+        .pipe(source("Gls.min.js"))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest("./dist"));
+});
+
 gulp.task("dist", function (callback) {
-    require("run-sequence")("dist:clean", "dist:amd", "dist:system", callback);
+    require("run-sequence")("dist:clean", "dist:dev", "dist:min", callback);
 });
 
 gulp.task("clean", function (callback) {
@@ -184,5 +196,5 @@ gulp.task("watch", ["default"], function () {
 });
 
 gulp.task("default", function (callback) {
-    require("run-sequence")("src", "test", callback);
+    require("run-sequence")("src", "test", "dist", callback);
 });
