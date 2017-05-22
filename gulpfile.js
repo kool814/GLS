@@ -160,6 +160,7 @@ function runTests(wildcard) {
 
     return gulp.src(wildcard)
         .pipe(mocha({
+            argv: JSON.stringify(process.argv),
             reporter: "spec",
         }))
         .on("error", function () {
