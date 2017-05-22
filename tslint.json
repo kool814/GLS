@@ -1,7 +1,10 @@
 {
-    "extends": "tslint:all",
+    "extends": "tslint:recommended",
     "rules": {
         "linebreak-style": [false],
-        "no-trailing-whitespace": [true, "exclude-jsdoc"]
+        "no-trailing-whitespace": [true, "ignore-jsdoc"],
+        "prefer-const": [false],
+        "prefer-for-of": [false],
+        "trailing-comma": [false]
     }
 }
