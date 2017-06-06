@@ -20,7 +20,6 @@ export class ListProperties {
      public concat: NativeCallProperties;
      
     /**
-    /**
      * How to retrieve the length of a list.
      */
     public length: NativeCallProperties;
