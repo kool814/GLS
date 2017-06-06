@@ -4,7 +4,7 @@ import { Parameter } from "./Parameters/Parameter";
 import { SingleParameter } from "./Parameters/SingleParameter";
 
 /**
- * A command that adds everything in one list to another list
+ * A command that adds everything in one list to another list.
  */
 export class ListAddListCommand extends NativeCallCommand {
     /**
