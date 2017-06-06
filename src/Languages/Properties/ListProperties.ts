@@ -13,10 +13,12 @@ export class ListProperties {
      * The name of the list class.
      */
     public className: string;
+
     /**
      * Adds two or more lists together
      */
      public concat: NativeCallProperties;
+     
     /**
     /**
      * How to retrieve the length of a list.
