@@ -4,11 +4,12 @@ import { Parameter } from "./Parameters/Parameter";
 import { SingleParameter } from "./Parameters/SingleParameter";
 
 /**
- * A command that adds everything in one list to another list.
+ * A command that adds everything in the second list to the first list.
  */
 export class ListAddListCommand extends NativeCallCommand {
     /**
      * Information on parameters this command takes in.
+     * second parameter contains values that will be added to first parameter
      */
     private static parameters: Parameter[] = [
         new SingleParameter("name", "The name of the list.", true),
