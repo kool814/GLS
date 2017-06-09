@@ -161,7 +161,7 @@ export class CommandsBag {
             "is not null": new IsNotNullCommand(context),
             "is null": new IsNullCommand(context),
             "lambda": new LambdaBodyCommand(context),
-            "list addList": new ListAddListCommand(context),
+            "list add list": new ListAddListCommand(context),
             "list initialize": new ListInitializeCommand(context),
             "list length": new ListLengthCommand(context),
             "list pop": new ListPopCommand(context),
