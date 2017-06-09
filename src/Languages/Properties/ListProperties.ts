@@ -7,7 +7,7 @@ export class ListProperties {
     /**
      * Adds two lists together.
      */
-    public add: NativeCallProperties;
+    public addList: NativeCallProperties;
 
     /**
      * Whether the language uses flexible arrays.

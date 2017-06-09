@@ -257,7 +257,7 @@ export class CSharp extends CLikeLanguage {
     protected generateListProperties(lists: ListProperties): void {
         lists.className = "List";
 
-        lists.add = new NativeCallProperties(
+        lists.addList = new NativeCallProperties(
             "AddRange",
             NativeCallScope.Member,
             NativeCallType.Function);

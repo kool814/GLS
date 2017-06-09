@@ -258,7 +258,7 @@ export class Ruby extends PythonicLanguage {
             "push",
             NativeCallScope.Member,
             NativeCallType.Function);
-        lists.add = new NativeCallProperties(
+        lists.addList = new NativeCallProperties(
             "concat",
             NativeCallScope.Member,
             NativeCallType.Function);
