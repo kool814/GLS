@@ -98,7 +98,7 @@ These commands will be implemented as native calls.
         <tr>
             <th>CSharp</th>
             <td>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"AddRange"</code></td>
@@ -116,7 +116,7 @@ These commands will be implemented as native calls.
                         <td><code>[secondList]</code></td>
                     </tr>
                 </table>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"RemoveAt"</code></td>
@@ -139,7 +139,7 @@ These commands will be implemented as native calls.
         <tr>
             <th>Java</th>
             <td>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"addAll"</code></td>
@@ -157,7 +157,7 @@ These commands will be implemented as native calls.
                         <td><code>[secondList]</code></td>
                     </tr>
                 </table>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"remove"</code></td>
@@ -180,7 +180,7 @@ These commands will be implemented as native calls.
         <tr>
             <th>Python</th>
             <td>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"extend"</code></td>
@@ -198,7 +198,7 @@ These commands will be implemented as native calls.
                         <td><code>[secondList]</code></td>
                     </tr>
                 </table>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"pop"</code></td>
@@ -217,7 +217,7 @@ These commands will be implemented as native calls.
         <tr>
             <th>Ruby</th>
             <td>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"concat"</code></td>
@@ -235,7 +235,7 @@ These commands will be implemented as native calls.
                         <td><code>[secondList]</code></td>
                     </tr>
                 </table>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"pop"</code></td>
@@ -254,7 +254,7 @@ These commands will be implemented as native calls.
         <tr>
             <th>TypeScript</th>
             <td>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"concat"</code></td>
@@ -272,7 +272,7 @@ These commands will be implemented as native calls.
                         <td><code>[secondList]</code></td>
                     </tr>
                 </table>
-                <table>
+                <table style="float: left">
                     <tr>
                         <td>Name</td>
                         <td><code>"pop"</code></td>
