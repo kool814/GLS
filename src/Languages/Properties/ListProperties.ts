@@ -7,6 +7,11 @@ export class ListProperties {
     /**
      * Whether the language uses flexible arrays.
      */
+    public add: NativeCallProperties;
+
+    /**
+     * Whether the language uses flexible arrays.
+     */
     public asArray: boolean;
 
     /**

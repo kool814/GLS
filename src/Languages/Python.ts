@@ -250,6 +250,10 @@ export class Python extends PythonicLanguage {
             "append",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.add = new NativeCallProperties(
+            "extend",
+            NativeCallScope.Member,
+            NativeCallType.Function);
     }
 
     /**

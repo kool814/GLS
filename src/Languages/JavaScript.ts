@@ -256,6 +256,10 @@ export class JavaScript extends CLikeLanguage {
             "push",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.add = new NativeCallProperties(
+            "concat",
+            NativeCallScope.Member,
+            NativeCallType.Function);
     }
 
     /**
