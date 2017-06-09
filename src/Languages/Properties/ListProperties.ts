@@ -5,7 +5,7 @@ import { NativeCallProperties } from "./NativeCallProperties";
  */
 export class ListProperties {
     /**
-     * Adds two lists together
+     * Adds two lists together.
      */
     public add: NativeCallProperties;
 
@@ -18,7 +18,7 @@ export class ListProperties {
      * The name of the list class.
      */
     public className: string;
-     
+
     /**
      * How to retrieve the length of a list.
      */

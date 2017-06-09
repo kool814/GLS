@@ -12,8 +12,8 @@ export class ListAddListCommand extends NativeCallCommand {
      * second parameter contains values that will be added to first parameter
      */
     private static parameters: Parameter[] = [
-        new SingleParameter("name", "The name of the list.", true),
-        new SingleParameter("name", "The name of the list.", true)
+        new SingleParameter("first", "The first list.", true),
+        new SingleParameter("second", "The second list.", true)
     ];
 
     /**
