@@ -6,7 +6,7 @@ import { SingleParameter } from "./Parameters/SingleParameter";
 /**
  * A command that clears a list.
  */
-export class ListAddListCommand extends NativeCallCommand {
+export class ListClearCommand extends NativeCallCommand {
     /**
      * Information on parameters this command takes in.
      */
@@ -18,7 +18,7 @@ export class ListAddListCommand extends NativeCallCommand {
      * @returns Information on parameters this command takes in.
      */
     public getParameters(): Parameter[] {
-        return ListAddListCommand.parameters;
+        return ListClearCommand.parameters;
     }
 
     /**
