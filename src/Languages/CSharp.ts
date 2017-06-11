@@ -266,7 +266,7 @@ export class CSharp extends CLikeLanguage {
             "Clear",
             NativeCallScope.Member,
             NativeCallType.Function);
-        
+
         lists.length = new NativeCallProperties(
             "Count",
             NativeCallScope.Member,
