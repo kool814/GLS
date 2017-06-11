@@ -1,3 +1,3 @@
 -
-aaa.length=0;
+aaa.length = 0;
 -
