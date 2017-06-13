@@ -244,6 +244,10 @@ export class JavaScript extends CLikeLanguage {
      */
     protected generateListProperties(lists: ListProperties): void {
         lists.asArray = true;
+        lists.clear = new NativeCallProperties(
+            "length",
+            NativeCallScope.Member,
+            NativeCallType.Property);
         lists.length = new NativeCallProperties(
             "length",
             NativeCallScope.Member,
