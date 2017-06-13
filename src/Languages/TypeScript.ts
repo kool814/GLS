@@ -257,7 +257,7 @@ export class TypeScript extends CLikeLanguage {
     protected generateListProperties(lists: ListProperties): void {
         lists.asArray = true;
         lists.clear = new NativeCallProperties(
-            "length",
+            "splice",
             NativeCallScope.Member,
             NativeCallType.Property);
         lists.length = new NativeCallProperties(
