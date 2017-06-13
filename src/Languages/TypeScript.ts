@@ -260,6 +260,8 @@ export class TypeScript extends CLikeLanguage {
             "splice",
             NativeCallScope.Member,
             NativeCallType.Property);
+        lists.clear.addArgument("0");
+        lists.clear.addArgument("{0}.length");
         lists.length = new NativeCallProperties(
             "length",
             NativeCallScope.Member,
