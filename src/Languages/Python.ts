@@ -254,6 +254,10 @@ export class Python extends PythonicLanguage {
             "extend",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.sort = new NativeCallProperties(
+            "sort",
+            NativeCallScope.Member,
+            NativeCallType.Function);
     }
 
     /**
