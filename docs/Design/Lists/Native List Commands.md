@@ -65,6 +65,14 @@ foo.pop
 aaa.sort()
 ```
 
+### JavaScript
+
+```javascript
+aaa.concat(bbb);
+foo.pop();
+aaa.sort();
+```
+
 ### TypeScript
 
 ```typescript
@@ -344,6 +352,61 @@ These commands will be implemented as native calls.
         </tr>
         <tr>
             <th>TypeScript</th>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"concat"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                    <tr>
+                        <td>Arguments</td>
+                        <td><code>[secondList]</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"pop"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"sort"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
             <td>
                 <table>
                     <tr>
