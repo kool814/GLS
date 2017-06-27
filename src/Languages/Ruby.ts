@@ -262,6 +262,10 @@ export class Ruby extends PythonicLanguage {
             "concat",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.sort = new NativeCallProperties(
+            "sort",
+            NativeCallScope.Member,
+            NativeCallType.Function);
     }
 
     /**
