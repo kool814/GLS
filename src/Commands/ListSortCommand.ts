@@ -4,7 +4,7 @@ import { Parameter } from "./Parameters/Parameter";
 import { SingleParameter } from "./Parameters/SingleParameter";
 
 /**
- * A command for a list push statement.
+ * A command for an in-place list sort statement.
  */
 export class ListSortCommand extends NativeCallCommand {
     /**
