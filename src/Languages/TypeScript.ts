@@ -272,6 +272,10 @@ export class TypeScript extends CLikeLanguage {
             "concat",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.sort = new NativeCallProperties(
+            "sort",
+            NativeCallScope.Member,
+            NativeCallType.Function);
     }
 
     /**
