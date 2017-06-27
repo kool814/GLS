@@ -282,6 +282,10 @@ export class Java extends CLikeLanguage {
             "add",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.sort = new NativeCallProperties(
+            "sort",
+            NativeCallScope.Member,
+            NativeCallType.Function);
 
         lists.requiredImports = {
             "java.util": ["ArrayList"]
