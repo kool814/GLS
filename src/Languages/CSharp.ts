@@ -278,6 +278,10 @@ export class CSharp extends CLikeLanguage {
             "Add",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.sort = new NativeCallProperties(
+            "Sort",
+            NativeCallScope.Member,
+            NativeCallType.Function);
 
         lists.requiredImports = {
             "System/Collections/Generic": ["List"]

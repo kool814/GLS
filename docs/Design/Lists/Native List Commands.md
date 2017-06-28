@@ -19,11 +19,18 @@ The `list add list` command adds everything in the second list to the first list
 
 The `list pop` command removes the last element of a list.
 
+### `list sort`
+
+`list sort : listname`
+
+The `list sort` command sorts a list in-place.
+
 ## Usage
 
 ```gls
 list add list : aaa bbb
 list pop : foo
+list sort : aaa
 ```
 
 ### CSharp
@@ -31,6 +38,7 @@ list pop : foo
 ```csharp
 aaa.AddRange(bbb);
 foo.RemoveAt(foo.Count - 1);
+aaa.Sort();
 ```
 
 ### Java
@@ -38,6 +46,7 @@ foo.RemoveAt(foo.Count - 1);
 ```java
 aaa.addAll(bbb);
 foo.remove(foo.size() - 1);
+aaa.sort();
 ```
 
 ### Python
@@ -45,6 +54,7 @@ foo.remove(foo.size() - 1);
 ```python
 aaa.extend(bbb)
 foo.pop()
+aaa.sort()
 ```
 
 ### Ruby
@@ -52,6 +62,15 @@ foo.pop()
 ```ruby
 aaa.concat(bbb)
 foo.pop
+aaa.sort()
+```
+
+### JavaScript
+
+```javascript
+aaa.concat(bbb);
+foo.pop();
+aaa.sort();
 ```
 
 ### TypeScript
@@ -59,6 +78,7 @@ foo.pop
 ```typescript
 aaa.concat(bbb);
 foo.pop();
+aaa.sort();
 ```
 
 ## Implementation
@@ -75,14 +95,19 @@ These commands will be implemented as native calls.
     </thead>
     <tbody>
         <tr>
+            <td>Add List</td>
+            <td><em>(native call properties)</em></td>
+            <td>Method properties to add a list to a second list.</td>
+        </tr>
+        <tr>
             <td>Pop</td>
             <td><em>(native call properties)</em></td>
             <td>Method properties to remove the last element of a list.</td>
         </tr>
         <tr>
-            <td>Add List</td>
+            <td>Sort</td>
             <td><em>(native call properties)</em></td>
-            <td>Method properties to add a list to a second list.</td>
+            <td>Method properties to sort a list in-place.</td>
         </tr>
     </tbody>
 </table>
@@ -94,6 +119,7 @@ These commands will be implemented as native calls.
         <th>Language</th>
         <th>Add List</th>
         <th>Pop</th>
+        <th>Sort</th>
     </thead>
     <tbody>
         <tr>
@@ -135,6 +161,22 @@ These commands will be implemented as native calls.
                     <tr>
                         <td>Arguments</td>
                         <td><code>["{0}.Count - 1"]</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+            <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"Sort"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
                     </tr>
                 </table>
             </td>
@@ -181,6 +223,22 @@ These commands will be implemented as native calls.
                     </tr>
                 </table>
             </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"sort"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
         </tr>
         <tr>
             <th>Python</th>
@@ -209,6 +267,22 @@ These commands will be implemented as native calls.
                     <tr>
                         <td>Name</td>
                         <td><code>"pop"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"sort"</code></td>
                     </tr>
                     <tr>
                         <td>Scope</td>
@@ -259,6 +333,22 @@ These commands will be implemented as native calls.
                     </tr>
                 </table>
             </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"sort"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
         </tr>
         <tr>
             <th>TypeScript</th>
@@ -287,6 +377,77 @@ These commands will be implemented as native calls.
                     <tr>
                         <td>Name</td>
                         <td><code>"pop"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"sort"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"concat"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                    <tr>
+                        <td>Arguments</td>
+                        <td><code>[secondList]</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"pop"</code></td>
+                    </tr>
+                    <tr>
+                        <td>Scope</td>
+                        <td><code>Static</code></td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td><code>Function</code></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><code>"sort"</code></td>
                     </tr>
                     <tr>
                         <td>Scope</td>

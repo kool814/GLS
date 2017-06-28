@@ -35,6 +35,11 @@ export class ListProperties {
     public push: NativeCallProperties;
 
     /**
+     * How to sort a list in-place.
+     */
+    public sort: NativeCallProperties;
+
+    /**
      * Required imports to be able to use lists.
      */
     public requiredImports: { [i: string]: string[] };

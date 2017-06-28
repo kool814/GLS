@@ -60,6 +60,7 @@ import { ListLengthCommand } from "./ListLengthCommand";
 import { ListPopCommand } from "./ListPopCommand";
 import { ListPushCommand } from "./ListPushCommand";
 import { LiteralCommand } from "./LiteralCommand";
+import { ListSortCommand } from "./ListSortCommand";
 import { ListTypeCommand } from "./ListTypeCommand";
 import { MainEndCommand } from "./MainEndCommand";
 import { MainStartCommand } from "./MainStartCommand";
@@ -167,6 +168,7 @@ export class CommandsBag {
             "list pop": new ListPopCommand(context),
             "list push": new ListPushCommand(context),
             "literal": new LiteralCommand(context),
+            "list sort": new ListSortCommand(context),
             "list type": new ListTypeCommand(context),
             "main end": new MainEndCommand(context),
             "main start": new MainStartCommand(context),
