@@ -246,6 +246,12 @@ export class Python extends PythonicLanguage {
             "pop",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.popFront = new NativeCallProperties(
+            "pop",
+            NativeCallScope.Member,
+            NativeCallType.Function);
+        lists.popFront.addArgument("0");
+
         lists.push = new NativeCallProperties(
             "append",
             NativeCallScope.Member,

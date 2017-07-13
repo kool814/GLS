@@ -278,6 +278,13 @@ export class Java extends CLikeLanguage {
 
         lists.pop.addArgument("{0}.size() - 1");
 
+        lists.popFront = new NativeCallProperties(
+            "remove",
+            NativeCallScope.Member,
+            NativeCallType.Function);
+
+        lists.popFront.addArgument("0");
+
         lists.push = new NativeCallProperties(
             "add",
             NativeCallScope.Member,

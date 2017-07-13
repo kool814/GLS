@@ -254,6 +254,10 @@ export class Ruby extends PythonicLanguage {
             "pop",
             NativeCallScope.Member,
             NativeCallType.Property);
+        lists.popFront = new NativeCallProperties(
+            "shift",
+            NativeCallScope.Member,
+            NativeCallType.Property);
         lists.push = new NativeCallProperties(
             "push",
             NativeCallScope.Member,

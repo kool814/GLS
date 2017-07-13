@@ -274,6 +274,13 @@ export class CSharp extends CLikeLanguage {
 
         lists.pop.addArgument("{0}.Count - 1");
 
+        lists.popFront = new NativeCallProperties(
+            "RemoveAt",
+            NativeCallScope.Member,
+            NativeCallType.Function);
+
+        lists.popFront.addArgument("0");
+
         lists.push = new NativeCallProperties(
             "Add",
             NativeCallScope.Member,
