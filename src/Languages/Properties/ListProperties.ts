@@ -30,6 +30,11 @@ export class ListProperties {
     public pop: NativeCallProperties;
 
     /**
+     * How to remove an element from the front of a list.
+     */
+    public popFront: NativeCallProperties;
+
+    /**
      * How to add an element to the end of a list.
      */
     public push: NativeCallProperties;

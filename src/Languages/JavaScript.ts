@@ -252,6 +252,10 @@ export class JavaScript extends CLikeLanguage {
             "pop",
             NativeCallScope.Member,
             NativeCallType.Function);
+        lists.popFront = new NativeCallProperties(
+            "shift",
+            NativeCallScope.Member,
+            NativeCallType.Function);
         lists.push = new NativeCallProperties(
             "push",
             NativeCallScope.Member,
