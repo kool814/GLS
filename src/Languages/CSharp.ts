@@ -279,7 +279,7 @@ export class CSharp extends CLikeLanguage {
             NativeCallScope.Member,
             NativeCallType.Function);
 
-        lists.pop.addArgument("0");
+        lists.popFront.addArgument("0");
 
         lists.push = new NativeCallProperties(
             "Add",
