@@ -15,37 +15,37 @@ The `list add list` command adds everything in the second list to the first list
 
 ### `list initialize`
 
-`list initialize : string "aaa" `
+`list initialize : string "listName" `
 
 The `list initialize` command initializes a new list.
 
 ### `list length`
 
-`list length : listname `
+`list length : listName `
 
 The `list initialize` command retrieves the length of a list.
 
 ### `list pop`
 
-`list pop : name`
+`list pop : listName`
 
 The `list pop` command removes the last element of a list.
 
 ### `list pop front`
 
-`list pop front : listname`
+`list pop front : listName`
 
 The `list pop front` command removes the first element of a list.
 
 ### `list push`
 
-`list push : listname elementname`
+`list push : listName elementName`
 
 The `list push` command adds the element to the end of the list.
 
 ### `list sort`
 
-`list sort : listname`
+`list sort : listName`
 
 The `list sort` command sorts a list in-place.
 
