@@ -86,8 +86,8 @@ let bar: number = 7;
 ### Javascript
 
 ```javascript
-let foo: string = "foo";
-let bar: number = 7;
+let foo = "foo";
+let bar = 7;
 
 `...`
 `Foo: ${foo}`

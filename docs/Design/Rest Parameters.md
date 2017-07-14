@@ -50,7 +50,7 @@ string... foo
 ### JavaScript
 
 ```javascript
-...foo: string[]
+...foo
 ```
 
 
@@ -147,10 +147,10 @@ string... foo
         <tr>
             <th>Javascript</th>
             <td><code>"..."</code></td>
-            <td><code>": "</code></td>
-            <td><code>"[]"</code></td>
-            <td><code>true</code></td>
-            <td><code>true</code></td>
+            <td><code>""</code></td>
+            <td><code>""</code></td>
+            <td><code>false</code></td>
+            <td><code>false</code></td>
         </tr>
     </tbody>
 </table>

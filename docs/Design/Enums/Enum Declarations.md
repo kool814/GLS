@@ -91,10 +91,10 @@ enum Direction {
 ### JavaScript
 
 ```
-enum Direction {
-    Unknown = 0,
-    Horizontal = 1,
-    Vertical = 2
+let Direction = {
+            Unknown: 0,
+            Horizontal: 1,
+            Vertical: 2
 }
 ```
 
@@ -216,7 +216,7 @@ The ending line is a standard block end.
         </tr>
         <tr>
             <th>JavaScript</th>
-            <td>`"enum "`</td>
+            <td>`"let "`</td>
             <td>`""`</td>
             <td>`" = "`</td>
             <td>`""`</td>

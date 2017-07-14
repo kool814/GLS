@@ -70,9 +70,9 @@ namespace Program {
 ### JavaScript
 
 ```javascript
-namespace Program {
+(() => {
     // ...
-}
+})();
 ```
 
 ## Implementation
@@ -146,9 +146,9 @@ namespace Program {
         </tr>
         <tr>
             <th>JavaScript</th>
-            <td><code>"namespace "</code></td>
+            <td><code>"(() =>  "</code></td>
             <td><code>" {</code></td>
-            <td><code>"}"</code></td>
+            <td><code>"})();"</code></td>
         </tr>
     </tbody>
 </table>

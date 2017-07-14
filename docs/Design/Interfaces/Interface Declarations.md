@@ -66,16 +66,6 @@ interface INewCar extends ICar, IVehicle {
 }
 ```
 
-### JavaScript
-
-```JavaScript
-interface IPoint {
-}
-
-interface INewCar extends ICar, IVehicle {
-}
-```
-
 
 ## Implementation
 
@@ -146,14 +136,6 @@ interface INewCar extends ICar, IVehicle {
         </tr>
         <tr>
             <th>TypeScript</th>
-            <td><code>"interface "</code></td>
-            <td><code>" {\n"</code></td>
-            <td><code>" extends "</code></td>
-            <td><code>", "</code></td>
-            <td><code>"}"</code></td>
-        </tr>
-        <tr>
-            <th>JavaScript</th>
             <td><code>"interface "</code></td>
             <td><code>" {\n"</code></td>
             <td><code>" extends "</code></td>

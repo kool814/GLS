@@ -60,7 +60,7 @@ require "package/section"
 import { ItemOne, ItemTwo } from "package/section";
 ```
 
-### TypeScript
+### JavaScript
 
 ```javascript
 import { ItemOne, ItemTwo } from "package/section";

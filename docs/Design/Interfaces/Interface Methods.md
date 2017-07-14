@@ -46,15 +46,6 @@ interface IPoint {
 }
 ```
 
-### JavaScript
-
-```javascript
-interface IPoint {
-    setPoint(x: number): number;
-}
-```
-
-
 ## Implementation
 
 ### Properties
@@ -116,13 +107,6 @@ interface IPoint {
         </tr>
         <tr>
             <th>TypeScript</th>
-            <td><code>""</code></td>
-            <td><code>" ("</code></td>
-            <td><code>")"</code></td>
-            <td><code>true</code></td>
-        </tr>
-        <tr>
-            <th>JavaScript</th>
             <td><code>""</code></td>
             <td><code>" ("</code></td>
             <td><code>")"</code></td>
