@@ -122,6 +122,9 @@ this.gender;
 ### JavaScript
 
 ```javascript
+public name;
+protected age;
+private gender;
 ```
 
 ```javascript
