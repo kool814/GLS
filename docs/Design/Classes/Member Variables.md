@@ -119,6 +119,21 @@ this.age;
 this.gender;
 ```
 
+### JavaScript
+
+```javascript
+public name: string;
+protected age: number;
+private gender: string;
+```
+
+```javascript
+person.name;
+person.name;
+this.age;
+this.gender;
+```
+
 
 ## Implementation
 
@@ -255,6 +270,19 @@ this.gender;
         </tr>
         <tr>
             <th>TypeScript</th>
+            <td><code>"public "</code></td>
+            <td><code>CamelCase</code></td>
+            <td><code>""</code></td>
+            <td><code>"protected "</code></td>
+            <td><code>CamelCase</code></td>
+            <td><code>""</code></td>
+            <td><code>"private "</code></td>
+            <td><code>CamelCase</code></td>
+            <td><code>""</code></td>
+            <td><code>false</code></td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
             <td><code>"public "</code></td>
             <td><code>CamelCase</code></td>
             <td><code>""</code></td>
