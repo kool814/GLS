@@ -83,6 +83,17 @@ let bar: number = 7;
 `Foo: ${foo}; Bar: ${bar}`
 ```
 
+### Javascript
+
+```javascript
+let foo: string = "foo";
+let bar: number = 7;
+
+`...`
+`Foo: ${foo}`
+`Foo: ${foo}; Bar: ${bar}`
+```
+
 
 ## Implementation
 
@@ -204,6 +215,17 @@ let bar: number = 7;
         </tr>
         <tr>
             <th>TypeScript</th>
+            <td><code>"`"</code></td>
+            <td></td>
+            <td></td>
+            <td><code>"`"</code></td>
+            <td>`"${"`</td>
+            <td>`"}"`</td>
+            <td>`false`</td>
+            <td>`true`</td>
+        </tr>
+        <tr>
+            <th>Javascript</th>
             <td><code>"`"</code></td>
             <td></td>
             <td></td>
