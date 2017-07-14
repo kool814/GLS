@@ -236,7 +236,7 @@ These commands will be implemented as native calls.
                     </tr>
                     <tr>
                         <td>Arguments</td>
-                        <td><code>["aaa"]</code></td>
+                        <td><code>["listName"]</code></td>
                     </tr>
                 </table>
             </td>
@@ -371,7 +371,7 @@ These commands will be implemented as native calls.
                     </tr>
                     <tr>
                         <td>Arguments</td>
-                        <td><code>["aaa"]</code></td>
+                        <td><code>["listName"]</code></td>
                     </tr>
                 </table>
             </td>
@@ -502,7 +502,7 @@ These commands will be implemented as native calls.
                     </tr>
                     <tr>
                         <td>Arguments</td>
-                        <td><code>["aaa"]</code></td>
+                        <td><code>["listName"]</code></td>
                     </tr>
                 </table>
             </td>
@@ -629,7 +629,7 @@ These commands will be implemented as native calls.
                     </tr>
                     <tr>
                         <td>Arguments</td>
-                        <td><code>["aaa"]</code></td>
+                        <td><code>["listName"]</code></td>
                     </tr>
                 </table>
             </td>
@@ -752,7 +752,7 @@ These commands will be implemented as native calls.
                     </tr>
                     <tr>
                         <td>Arguments</td>
-                        <td><code>["aaa"]</code></td>
+                        <td><code>["listName"]</code></td>
                     </tr>
                 </table>
             </td>
@@ -875,7 +875,7 @@ These commands will be implemented as native calls.
                     </tr>
                     <tr>
                         <td>Arguments</td>
-                        <td><code>["aaa"]</code></td>
+                        <td><code>["listName"]</code></td>
                     </tr>
                 </table>
             </td>
