@@ -60,6 +60,12 @@ require "package/section"
 import { ItemOne, ItemTwo } from "package/section";
 ```
 
+### TypeScript
+
+```javascript
+import { ItemOne, ItemTwo } from "package/section";
+```
+
 
 ## Implementation
 
@@ -174,6 +180,16 @@ Others allow items to be separated by `", "`.
         </tr>
         <tr>
             <th>TypeScript</th>
+            <td><code>FileSystem</code></td>
+            <td><code>true</code></td>
+            <td><code>false</code></td>
+            <td><code>true</code></td>
+            <td><code>"import { "</code></td>
+            <td><code>" } from \""</code></td>
+            <td><code>"\";"</code></td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
             <td><code>FileSystem</code></td>
             <td><code>true</code></td>
             <td><code>false</code></td>
