@@ -67,6 +67,14 @@ namespace Program {
 }
 ```
 
+### JavaScript
+
+```javascript
+namespace Program {
+    // ...
+}
+```
+
 ## Implementation
 
 ### Properties
@@ -132,6 +140,12 @@ namespace Program {
         </tr>
         <tr>
             <th>TypeScript</th>
+            <td><code>"namespace "</code></td>
+            <td><code>" {</code></td>
+            <td><code>"}"</code></td>
+        </tr>
+        <tr>
+            <th>JavaScript</th>
             <td><code>"namespace "</code></td>
             <td><code>" {</code></td>
             <td><code>"}"</code></td>
