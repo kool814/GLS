@@ -47,6 +47,12 @@ string... foo
 ...foo: string[]
 ```
 
+### JavaScript
+
+```javascript
+...foo: string[]
+```
+
 
 ## Implementation
 
@@ -132,6 +138,14 @@ string... foo
         </tr>
         <tr>
             <th>TypeScript</th>
+            <td><code>"..."</code></td>
+            <td><code>": "</code></td>
+            <td><code>"[]"</code></td>
+            <td><code>true</code></td>
+            <td><code>true</code></td>
+        </tr>
+        <tr>
+            <th>Javascript</th>
             <td><code>"..."</code></td>
             <td><code>": "</code></td>
             <td><code>"[]"</code></td>
