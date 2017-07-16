@@ -26,11 +26,17 @@ export class ArgvParser {
      */
     public parseCommandNames(): Set<string> {
         const testNames = new Set();
+        let hadCustomCommand = false;
 
         for (let i = 0; i < this.argv.length - 1; i += 1) {
             if (this.argv[i] === "--command") {
                 testNames.add(this.argv[i + 1].toLowerCase());
+                hadCustomCommand = true;
             }
+        }
+
+        if (!hadCustomCommand) {
+            testNames.add("*");
         }
 
         return testNames;
