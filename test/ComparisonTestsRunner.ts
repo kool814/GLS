@@ -4,6 +4,7 @@ import "mocha";
 import * as minimatch from "minimatch";
 import * as path from "path";
 
+import { findGlsFilesUnder, findGlsTestSourcesUnder } from "../util";
 import { Gls } from "../lib/Gls";
 import { LanguagesBag } from "../lib/Languages/LanguagesBag";
 
@@ -41,7 +42,7 @@ export class ComparisonTestsRunner {
         this.section = section;
         this.commandsToRun = commandsToRun;
         this.rootPath = path.resolve(section);
-        this.commandTests = this.readTestsUnderPath(this.rootPath, this.commandsToRun);
+        this.commandTests = findGlsTestSourcesUnder(this.rootPath, this.commandsToRun);
     }
 
     /**
@@ -88,38 +89,6 @@ export class ComparisonTestsRunner {
         const expected = this.readCommandFile(command, test + extension);
 
         expect(gls.convert(source)).to.be.deep.equal(expected);
-    }
-
-    /**
-     * Retrieves, for each command in a directory, tests under that command.
-     * 
-     * @param rootPath   An absolute path to a command's tests folder.
-     * @param commandsToRun   Command groups to run, if not all.
-     * @returns Tests for each command in a directory.
-     */
-    private readTestsUnderPath(rootPath: string, commandsToRun: Set<string>): Map<string, string[]> {
-        const tests = new Map<string, string[]>();
-        let childrenNames = fs.readdirSync(rootPath);
-
-        if (commandsToRun !== undefined) {
-            const commandMatchers = Array.from(commandsToRun.keys());
-            childrenNames = childrenNames
-                .filter(
-                    (childName) => commandMatchers.some(
-                        (commandMatcher) => minimatch(childName, commandMatcher, {
-                            nocase: true
-                        })));
-        }
-
-        for (const childName of childrenNames) {
-            tests.set(
-                childName,
-                fs.readdirSync(path.resolve(rootPath, childName))
-                    .filter((testFileName) => testFileName.indexOf(".gls") !== -1)
-                    .map((testFileName) => testFileName.substring(0, testFileName.indexOf(".gls"))));
-        }
-
-        return tests;
     }
 
     /**
