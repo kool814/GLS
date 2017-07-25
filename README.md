@@ -271,7 +271,7 @@ Alternately, use `tsc` to build source files under `/src` to `/lib`, and `tsc -w
 
 Integration and end-to-end tests are done using BDD.
 Folders under `/test/integration` and `/test/end-to-end` will contain a `.gls` file with GLS source code along with text files of the expected output in supported languages.
-These are verifified during `gulp test`.
+These are verified during `gulp test`.
 
 You can run specific tests using their gulp task (`gulp test:integration` or `gulp test:end-to-end`).
 Specify `--command`(s) to only run tests within groups that case-insensitive [minimatch](https://www.npmjs.com/package/minimatch) them (e.g. `gulp test:end-to-end --command *array* *list*`).
