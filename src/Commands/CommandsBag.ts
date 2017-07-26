@@ -73,6 +73,7 @@ import { MathMaxCommand } from "./MathMaxCommand";
 import { MathMinCommand } from "./MathMinCommand";
 import { MemberVariableCommand } from "./MemberVariableCommand";
 import { MemberVariableDeclareCommand } from "./MemberVariableDeclareCommand";
+import { NewCommand } from "./NewCommand";
 import { NotCommand } from "./NotCommand";
 import { OperationCommand } from "./OperationCommand";
 import { OperatorCommand } from "./OperatorCommand";
@@ -183,6 +184,7 @@ export class CommandsBag {
             [CommandNames.MathMin]: new MathMinCommand(context),
             [CommandNames.MemberVariable]: new MemberVariableCommand(context),
             [CommandNames.MemberVariableDeclare]: new MemberVariableDeclareCommand(context),
+            [CommandNames.NewObject]: new NewCommand(context),
             [CommandNames.Not]: new NotCommand(context),
             [CommandNames.Operation]: new OperationCommand(context),
             [CommandNames.Operator]: new OperatorCommand(context),

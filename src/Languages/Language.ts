@@ -18,6 +18,7 @@ import { LanguageProperties } from "./Properties/LanguageProperties";
 import { ListProperties } from "./Properties/ListProperties";
 import { LoopProperties } from "./Properties/LoopProperties";
 import { MathProperties } from "./Properties/MathProperties";
+import { NewProperties } from "./Properties/NewProperties";
 import { NumberProperties } from "./Properties/NumberProperties";
 import { OperatorProperties } from "./Properties/OperatorProperties";
 import { OutputProperties } from "./Properties/OutputProperties";
@@ -60,6 +61,7 @@ export abstract class Language {
         this.generateListProperties(this.properties.lists);
         this.generateLoopProperties(this.properties.loops);
         this.generateMathProperties(this.properties.math);
+        this.generateNewProperties(this.properties.newProp);
         this.generateNumberProperties(this.properties.numbers);
         this.generateOperatorProperties(this.properties.operators);
         this.generateOutputProperties(this.properties.output);
@@ -200,6 +202,13 @@ export abstract class Language {
      * @param math   A property container for metadata on math.
      */
     protected abstract generateMathProperties(math: MathProperties): void;
+
+    /**
+     * Generates metadata on numbers.
+     * 
+     * @param numbers   A property container for metadata on numbers.
+     */
+    protected abstract generateNewProperties(newProp: NewProperties): void;
 
     /**
      * Generates metadata on numbers.

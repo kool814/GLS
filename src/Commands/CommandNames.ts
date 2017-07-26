@@ -360,6 +360,11 @@ export class CommandNames {
     /**
      * Name key for the Not command.
      */
+    public static NewObject: string = "new object";
+
+    /**
+     * Name key for the Not command.
+     */
     public static Not: string = "not";
 
     /**
