@@ -358,6 +358,11 @@ export class CommandNames {
     public static MemberVariableDeclare: string = "member variable declare";
 
     /**
+     * Name key for the New command.
+     */
+    public static NewObject: string = "new";
+
+    /**
      * Name key for the Not command.
      */
     public static Not: string = "not";
