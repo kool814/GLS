@@ -12,9 +12,9 @@ import { SingleParameter } from "./Parameters/SingleParameter";
  */
 export class NewCommand extends Command {
     /**
-     * Metadata on what object to instantiate.
+     * Renderers for each possible render style.
      */
-    protected newProperties: NewProperties;
+    private styleRenderers: { [i: number]: (parameters: string[]) => LineResults };
 
     /**
      * Information on parameters this command takes in.
@@ -43,7 +43,11 @@ export class NewCommand extends Command {
     constructor(context: ConversionContext) {
         super(context);
 
-        this.newProperties = this.language.properties.newProp;
+        this.styleRenderers = {
+            [NewInstantiationSyntaxKind.MemberMethodCall]: this.renderMemberMethodCall.bind(this),
+            [NewInstantiationSyntaxKind.MethodCall]: this.renderMethodCall.bind(this),
+            [NewInstantiationSyntaxKind.Prefix]: this.renderPrefix.bind(this)
+        };
     }
 
     /**
@@ -54,46 +58,85 @@ export class NewCommand extends Command {
      * @returns Line(s) of code in the language.
      */
     public render(parameters: string[]): LineResults {
+        return this.styleRenderers[this.language.properties.newProp.instantiationKind](parameters);
+    }
+
+    /**
+     * Renders the New command in prefix style.
+     * 
+     * @param parameters   The command's name, followed by any number of
+     *                     items to initialize in the Array.
+     * @returns Line(s) of code in the language.
+     */
+    private renderPrefix(parameters: string[]): LineResults {
         let result: string = "";
 
         // the parser ensures we have a class name here in the argument list
         let typeName: string = parameters[1];
 
-        if (this.newProperties.instantiationKind === NewInstantiationSyntaxKind.Prefix) {
-            result += this.newProperties.keyword;
-            result += " ";
-            result += typeName;
-            result += "(";
-            if (parameters.length > 2) {
-                result += parameters[2];
-                for (let i: number = 3; i < parameters.length; i += 1) {
-                    result += ", " + parameters[i];
-                }
+        result += this.language.properties.newProp.keyword;
+        result += " ";
+        result += typeName;
+        result += "(";
+        if (parameters.length > 2) {
+            result += parameters[2];
+            for (let i: number = 3; i < parameters.length; i += 1) {
+                result += ", " + parameters[i];
             }
-            result += ")";
-        } else if (this.newProperties.instantiationKind === NewInstantiationSyntaxKind.MemberMethodCall) {
-            result += typeName;
-            result += ".";
-            result += this.newProperties.keyword;
-            result += "(";
-            if (parameters.length > 2) {
-                result += parameters[2];
-                for (let i: number = 3; i < parameters.length; i += 1) {
-                    result += ", " + parameters[i];
-                }
-            }
-            result += ")";
-        } else { // NewInstantiationSyntaxType.MethodCall
-            result += typeName;
-            result += "(";
-            if (parameters.length > 2) {
-                result += parameters[2];
-                for (let i: number = 3; i < parameters.length; i += 1) {
-                    result += ", " + parameters[i];
-                }
-            }
-            result += ")";
         }
+        result += ")";
+
+        return LineResults.newSingleLine(result, false);
+    }
+
+    /**
+     * Renders the New command for a language in method call style.
+     * 
+     * @param parameters   The command's name, followed by any number of
+     *                     items to initialize in the Array.
+     * @returns Line(s) of code in the language.
+     */
+    private renderMethodCall(parameters: string[]): LineResults {
+        let result: string = "";
+
+        // the parser ensures we have a class name here in the argument list
+        let typeName: string = parameters[1];
+
+        result += typeName;
+        result += "(";
+        if (parameters.length > 2) {
+            result += parameters[2];
+            for (let i: number = 3; i < parameters.length; i += 1) {
+                result += ", " + parameters[i];
+            }
+        }
+        result += ")";
+
+        return LineResults.newSingleLine(result, false);
+    }
+
+    /**
+     * Renders the command for a language in member method call style.
+     * 
+     * @param parameters   The command's name, followed by any number of
+     *                     items to initialize in the Array.
+     * @returns Line(s) of code in the language.
+     */
+    private renderMemberMethodCall(parameters: string[]): LineResults {
+        let result: string = "";
+
+        let typeName: string = parameters[1];
+        result += typeName;
+        result += ".";
+        result += this.language.properties.newProp.keyword;
+        result += "(";
+        if (parameters.length > 2) {
+            result += parameters[2];
+            for (let i: number = 3; i < parameters.length; i += 1) {
+                result += ", " + parameters[i];
+            }
+        }
+        result += ")";
 
         return LineResults.newSingleLine(result, false);
     }

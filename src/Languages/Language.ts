@@ -204,6 +204,13 @@ export abstract class Language {
     protected abstract generateMathProperties(math: MathProperties): void;
 
     /**
+     * Generates metadata on newProp.
+     * 
+     * @param newProp   A property container for metadata on new object instantiation.
+     */
+    protected abstract generateNewProperties(newProp: NewProperties): void;
+
+    /**
      * Generates metadata on numbers.
      * 
      * @param numbers   A property container for metadata on numbers.

@@ -322,7 +322,7 @@ export class Python extends PythonicLanguage {
     /**
      * Generates metadata on new object instantiation.
      * 
-     * @param numbers   A property container for metadata on numbers.
+     * @param newProp   A property container for metadata on new object instantiation.
      */
     protected generateNewProperties(newProp: NewProperties): void {
         newProp.instantiationKind = NewInstantiationSyntaxKind.MethodCall;
