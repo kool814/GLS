@@ -1,0 +1,3 @@
+-
+new ClassName(arg1)
+-

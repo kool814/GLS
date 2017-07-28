@@ -18,6 +18,7 @@ import { LambdaProperties } from "./Properties/LambdaProperties";
 import { ListProperties } from "./Properties/ListProperties";
 import { LoopProperties } from "./Properties/LoopProperties";
 import { MathProperties } from "./Properties/MathProperties";
+import { NewProperties, NewInstantiationSyntaxKind } from "./Properties/NewProperties";
 import { NativeCallProperties, NativeCallScope, NativeCallType } from "./Properties/NativeCallProperties";
 import { NumberProperties } from "./Properties/NumberProperties";
 import { OperatorProperties } from "./Properties/OperatorProperties";
@@ -343,6 +344,16 @@ export class TypeScript extends CLikeLanguage {
             NativeCallType.Function);
         math.requiredImports = [];
         math.mathName = "Math";
+    }
+
+    /**
+     * Generates metadata on new object instantiation.
+     * 
+     * @param newProp   A property container for metadata on new object instantiation.
+     */
+    protected generateNewProperties(newProp: NewProperties): void {
+        newProp.instantiationKind = NewInstantiationSyntaxKind.Prefix;
+        newProp.keyword = "new";
     }
 
     /**
