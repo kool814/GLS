@@ -9,6 +9,22 @@ Try it at [aka.ms/gls-demo](https://aka.ms/gls-demo).
 
 ## Usage
 
+GLS can be used as a command-line app or via `import`/`require`.
+
+### CLI
+
+To convert `file.gls` to `file.py`:
+
+```shell
+npm install gls-cli
+
+gls-cli --language Python file.gls
+```
+
+See [gls-cli](https://github.com/HighSchoolHacking/gls-cli).
+
+### Code
+
 `npm install general-language-syntax`
 
 ```javascript
