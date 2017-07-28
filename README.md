@@ -18,7 +18,7 @@ To convert `file.gls` to `file.py`:
 ```shell
 npm install gls-cli --global
 
-gls-cli --language Python file.gls
+gls --language Python file.gls
 ```
 
 See [gls-cli](https://github.com/HighSchoolHacking/gls-cli).
